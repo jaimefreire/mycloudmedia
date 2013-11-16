@@ -42,12 +42,15 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
 
         // runtime 'mysql:mysql-connector-java:5.1.22'
+        runtime 'postgresql:postgresql:8.4-702.jdbc3'
+
     }
 
     plugins {
         runtime ":hibernate:$grailsVersion"
         runtime ":jquery:1.8.3"
         runtime ":resources:1.2"
+        runtime ":database-migration:1.3.2"
 
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0"
@@ -56,8 +59,9 @@ grails.project.dependency.resolution = {
 
         build ":tomcat:$grailsVersion"
 
-        runtime ":database-migration:1.3.2"
 
         compile ':cache:1.0.1'
+        compile ':heroku:1.0.1'
+        compile ':cloud-support:1.0.8'
     }
 }
