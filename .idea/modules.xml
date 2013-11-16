@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/mycloudmedia.iml" filepath="$PROJECT_DIR$/mycloudmedia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycloudmedia-grailsPlugins.iml" filepath="$PROJECT_DIR$/mycloudmedia-grailsPlugins.iml" />
     </modules>
   </component>
 </project>

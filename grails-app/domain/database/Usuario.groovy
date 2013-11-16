@@ -1,5 +1,5 @@
 package database
-class User {
+class Usuario {
     String name
 
     String toString() { name }
