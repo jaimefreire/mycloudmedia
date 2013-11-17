@@ -1,122 +1,181 @@
-<!DOCTYPE html>
 <html>
-	<head>
-		<meta name="layout" content="main"/>
-		<title>Welcome to Grails</title>
-		<style type="text/css" media="screen">
-			#status {
-				background-color: #eee;
-				border: .2em solid #fff;
-				margin: 2em 2em 1em;
-				padding: 1em;
-				width: 12em;
-				float: left;
-				-moz-box-shadow: 0px 0px 1.25em #ccc;
-				-webkit-box-shadow: 0px 0px 1.25em #ccc;
-				box-shadow: 0px 0px 1.25em #ccc;
-				-moz-border-radius: 0.6em;
-				-webkit-border-radius: 0.6em;
-				border-radius: 0.6em;
-			}
+<head>
+    <title>Heroku Grails Test</title>
+    <meta name='layout' content='main' />
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <style type="text/css" media="screen">
 
-			.ie6 #status {
-				display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
-			}
+    #nav {
+        margin-top:20px;
+        margin-left:30px;
+        width:228px;
+        float:left;
 
-			#status ul {
-				font-size: 0.9em;
-				list-style-type: none;
-				margin-bottom: 0.6em;
-				padding: 0;
-			}
+    }
+    .homePagePanel * {
+        margin:0px;
+    }
+    .homePagePanel .panelBody ul {
+        list-style-type:none;
+        margin-bottom:10px;
+    }
+    .homePagePanel .panelBody h1 {
+        text-transform:uppercase;
+        font-size:1.1em;
+        margin-bottom:10px;
+    }
+    .homePagePanel .panelBody {
+        background: url(images/leftnav_midstretch.png) repeat-y top;
+        margin:0px;
+        padding:15px;
+    }
+    .homePagePanel .panelBtm {
+        background: url(images/leftnav_btm.png) no-repeat top;
+        height:20px;
+        margin:0px;
+    }
 
-			#status li {
-				line-height: 1.3;
-			}
+    .homePagePanel .panelTop {
+        background: url(images/leftnav_top.png) no-repeat top;
+        height:11px;
+        margin:0px;
+    }
+    h2 {
+        margin-top:15px;
+        margin-bottom:15px;
+        font-size:1.2em;
+    }
+    #pageBody {
+        margin-left:280px;
+        margin-right:20px;
+    }
+    </style>
+</head>
 
-			#status h1 {
-				text-transform: uppercase;
-				font-size: 1.1em;
-				margin: 0 0 0.3em;
-			}
+<body>
 
-			#page-body {
-				margin: 2em 1em 1.25em 18em;
-			}
+<body>
+<div id='nav'>
+    <div class='homePagePanel'>
+        <div class='panelTop'></div>
+        <div class='panelBody'>
+            <h1>Application Status</h1>
+            <ul>
+                <li>App version: <g:meta name='app.version'/></li>
+                <li>Grails version: <g:meta name='app.grails.version'/></li>
+                <li>Groovy version: ${GroovySystem.version}</li>
+                <li>JVM version: ${System.getProperty('java.version')}</li>
+                <li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
+                <li>Domains: ${grailsApplication.domainClasses.size()}</li>
+                <li>Services: ${grailsApplication.serviceClasses.size()}</li>
+                <li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
+            </ul>
+            <h1>Installed Plugins</h1>
+            <ul>
+                <g:each var='plugin' in='${applicationContext.pluginManager.allPlugins}'>
+                    <li>${plugin.name} - ${plugin.version}</li>
+                </g:each>
+            </ul>
+        </div>
+        <div class='panelBtm'></div>
+    </div>
+</div>
+<div id='pageBody'>
 
-			h2 {
-				margin-top: 1em;
-				margin-bottom: 0.3em;
-				font-size: 1em;
-			}
+    <table>
+        <thead>
+        <tr><th>Name</th><th>Value</th></tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>DATABASE_URL</td>
+            <td>${env.DATABASE_URL}</td>
+        </tr>
+        <tr>
+            <td>RABBITMQ_URL</td>
+            <td>${env.RABBITMQ_URL}</td>
+        </tr>
+        <tr>
+            <td>REDISTOGO_URL</td>
+            <td>${env.REDISTOGO_URL}</td>
+        </tr>
+        <tr>
+            <td>MONGOHQ_URL</td>
+            <td>${env.MONGOHQ_URL}</td>
+        </tr>
+        <tr>
+            <td>MONGOLAB_URI</td>
+            <td>${env.MONGOLAB_URI}</td>
+        </tr>
+        <tr>
+            <td>MEMCACHE_SERVERS</td>
+            <td>${env.MEMCACHE_SERVERS}</td>
+        </tr>
+        <tr>
+            <td>MEMCACHE_USERNAME</td>
+            <td>${env.MEMCACHE_USERNAME}</td>
+        </tr>
+        <tr>
+            <td>MEMCACHE_PASSWORD</td>
+            <td>${env.MEMCACHE_PASSWORD}</td>
+        </tr>
+        </tbody>
+    </table>
 
-			p {
-				line-height: 1.5;
-				margin: 0.25em 0;
-			}
+    <g:javascript library="jquery" plugin="jquery" />
 
-			#controller-list ul {
-				list-style-position: inside;
-			}
-
-			#controller-list li {
-				line-height: 1.3;
-				list-style-position: inside;
-				margin: 0.25em 0;
-			}
-
-			@media screen and (max-width: 480px) {
-				#status {
-					display: none;
-				}
-
-				#page-body {
-					margin: 0 1em 1em;
-				}
-
-				#page-body h1 {
-					margin-top: 0;
-				}
-			}
-		</style>
-	</head>
-	<body>
-		<a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div id="status" role="complementary">
-			<h1>Application Status</h1>
-			<ul>
-				<li>App version: <g:meta name="app.version"/></li>
-				<li>Grails version: <g:meta name="app.grails.version"/></li>
-				<li>Groovy version: ${GroovySystem.getVersion()}</li>
-				<li>JVM version: ${System.getProperty('java.version')}</li>
-				<li>Reloading active: ${grails.util.Environment.reloadingAgentEnabled}</li>
-				<li>Controllers: ${grailsApplication.controllerClasses.size()}</li>
-				<li>Domains: ${grailsApplication.domainClasses.size()}</li>
-				<li>Services: ${grailsApplication.serviceClasses.size()}</li>
-				<li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
-			</ul>
-			<h1>Installed Plugins</h1>
-			<ul>
-				<g:each var="plugin" in="${applicationContext.getBean('pluginManager').allPlugins}">
-					<li>${plugin.name} - ${plugin.version}</li>
-				</g:each>
-			</ul>
-		</div>
-		<div id="page-body" role="main">
-			<h1>Welcome to Grails</h1>
-			<p>Congratulations, you have successfully started your first Grails application! At the moment
-			   this is the default page, feel free to modify it to either redirect to a controller or display whatever
-			   content you may choose. Below is a list of controllers that are currently deployed in this application,
-			   click on each to execute its default action:</p>
-
-			<div id="controller-list" role="navigation">
-				<h2>Available Controllers:</h2>
-				<ul>
-					<g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-						<li class="controller"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></li>
-					</g:each>
-				</ul>
-			</div>
-		</div>
-	</body>
+    <div id='controllerList' class='dialog'>
+        <h2>Links:</h2>
+        <ul>
+            <li>Hibernate:
+                <ul>
+                    <li class='controller'>
+                        <g:link controller='author'>Author Controller</g:link>
+                    </li>
+                    <li class='controller'>
+                        <g:link controller='book'>Book Controller</g:link>
+                    </li>
+                </ul>
+            </li>
+            <li>Redis:
+                <ul>
+                    <li class='controller'>
+                        <g:link controller='redisThing'>Redis Domain Class</g:link>
+                    </li>
+                </ul>
+            </li>
+            <li>Mongo:
+                <ul>
+                    <li class='controller'>
+                        <g:link controller='mongoThing'>Mongo Domain Class</g:link>
+                    </li>
+                </ul>
+            </li>
+            <li>Rabbit:
+                <ul>
+                    <li class='controller'>
+                        <g:link controller='message'>Send a message</g:link>
+                    </li>
+                    <li class='controller'>
+                        <g:link controller='message' action='viewMessages'>View messages</g:link>
+                    </li>
+                </ul>
+            </li>
+            <li>Admin:
+                <ul>
+                    <li class='controller'>
+                        <g:link controller='console'>Console</g:link>
+                    </li>
+                    <li class='controller'>
+                        <g:link controller='dbconsole'>Database Console</g:link>
+                    </li>
+                    <li class='controller'>
+                        <h:dbconsoleLink>Database Console (autologin)</h:dbconsoleLink>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
 </html>
