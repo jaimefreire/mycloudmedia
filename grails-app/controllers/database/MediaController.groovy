@@ -1,5 +1,6 @@
 package database
 
+import mycloudmedia.Media
 import org.springframework.dao.DataIntegrityViolationException
 
 class MediaController {
@@ -63,8 +64,8 @@ class MediaController {
         if (version != null) {
             if (mediaInstance.version > version) {
                 mediaInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'media.label', default: 'Media')] as Object[],
-                          "Another user has updated this Media while you were editing")
+                        [message(code: 'media.label', default: 'Media')] as Object[],
+                        "Another user has updated this Media while you were editing")
                 render(view: "edit", model: [mediaInstance: mediaInstance])
                 return
             }

@@ -1,5 +1,6 @@
 package database
 
+import mycloudmedia.Usuario
 import org.springframework.dao.DataIntegrityViolationException
 
 class UsuarioController {
@@ -63,8 +64,8 @@ class UsuarioController {
         if (version != null) {
             if (usuarioInstance.version > version) {
                 usuarioInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'usuario.label', default: 'Usuario')] as Object[],
-                          "Another user has updated this Usuario while you were editing")
+                        [message(code: 'usuario.label', default: 'Usuario')] as Object[],
+                        "Another user has updated this Usuario while you were editing")
                 render(view: "edit", model: [usuarioInstance: usuarioInstance])
                 return
             }

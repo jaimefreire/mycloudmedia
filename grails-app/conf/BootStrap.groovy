@@ -1,4 +1,5 @@
 import grails.plugin.heroku.PostgresqlServiceInfo
+
 class BootStrap {
 
     def init = { servletContext ->
@@ -6,12 +7,10 @@ class BootStrap {
         System.getenv().each { name, value ->
             println "System.getenv($name): $value"
         }
-        println "n"
-        println "nSystem.getProperties():"
+        println "System.getProperties():"
         System.getProperties().each { name, value ->
             println "System.getProperty($name): $value"
         }
-        println "n"
 
         String DATABASE_URL = System.getenv('DATABASE_URL')
         if (DATABASE_URL) {
