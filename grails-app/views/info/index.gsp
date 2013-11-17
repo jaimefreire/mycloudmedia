@@ -90,6 +90,9 @@
 </div>
 <div id='pageBody'>
 <g:if env="development">
+DEVELOPMENT ENVIRONMENT!
+</g:if>
+<g:elseif env="production">
 
     <table>
         <thead>
@@ -186,6 +189,6 @@
         </ul>
     </div>
     </div>
-</g:if>
+</g:elseif>
 </body>
 </html>
