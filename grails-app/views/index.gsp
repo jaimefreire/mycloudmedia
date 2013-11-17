@@ -1,65 +1,71 @@
 <html>
 <head>
     <title>Heroku Grails Test</title>
-    <meta name='layout' content='main' />
-    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta name='layout' content='main'/>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
     <style type="text/css" media="screen">
 
     #nav {
-        margin-top:20px;
-        margin-left:30px;
-        width:228px;
-        float:left;
+        margin-top: 20px;
+        margin-left: 30px;
+        width: 228px;
+        float: left;
 
     }
+
     .homePagePanel * {
-        margin:0px;
+        margin: 0px;
     }
+
     .homePagePanel .panelBody ul {
-        list-style-type:none;
-        margin-bottom:10px;
+        list-style-type: none;
+        margin-bottom: 10px;
     }
+
     .homePagePanel .panelBody h1 {
-        text-transform:uppercase;
-        font-size:1.1em;
-        margin-bottom:10px;
+        text-transform: uppercase;
+        font-size: 1.1em;
+        margin-bottom: 10px;
     }
+
     .homePagePanel .panelBody {
         background: url(images/leftnav_midstretch.png) repeat-y top;
-        margin:0px;
-        padding:15px;
+        margin: 0px;
+        padding: 15px;
     }
+
     .homePagePanel .panelBtm {
         background: url(images/leftnav_btm.png) no-repeat top;
-        height:20px;
-        margin:0px;
+        height: 20px;
+        margin: 0px;
     }
 
     .homePagePanel .panelTop {
         background: url(images/leftnav_top.png) no-repeat top;
-        height:11px;
-        margin:0px;
+        height: 11px;
+        margin: 0px;
     }
+
     h2 {
-        margin-top:15px;
-        margin-bottom:15px;
-        font-size:1.2em;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        font-size: 1.2em;
     }
+
     #pageBody {
-        margin-left:280px;
-        margin-right:20px;
+        margin-left: 280px;
+        margin-right: 20px;
     }
     </style>
 </head>
 
 <body>
-
-<body>
 <div id='nav'>
     <div class='homePagePanel'>
         <div class='panelTop'></div>
+
         <div class='panelBody'>
-            <h1>Application Status: ${test}</h1>
+            <h1>Application Status</h1>
             <ul>
                 <li>App version: <g:meta name='app.version'/></li>
                 <li>Grails version: <g:meta name='app.grails.version'/></li>
@@ -70,6 +76,7 @@
                 <li>Services: ${grailsApplication.serviceClasses.size()}</li>
                 <li>Tag Libraries: ${grailsApplication.tagLibClasses.size()}</li>
             </ul>
+
             <h1>Installed Plugins</h1>
             <ul>
                 <g:each var='plugin' in='${applicationContext.pluginManager.allPlugins}'>
@@ -77,10 +84,12 @@
                 </g:each>
             </ul>
         </div>
+
         <div class='panelBtm'></div>
     </div>
 </div>
 <div id='pageBody'>
+<g:if env="development">
 
     <table>
         <thead>
@@ -122,7 +131,7 @@
         </tbody>
     </table>
 
-    <g:javascript library="jquery" plugin="jquery" />
+    <g:javascript library="jquery" plugin="jquery"/>
 
     <div id='controllerList' class='dialog'>
         <h2>Links:</h2>
@@ -176,6 +185,7 @@
             </li>
         </ul>
     </div>
-</div>
+    </div>
+</g:if>
 </body>
 </html>
