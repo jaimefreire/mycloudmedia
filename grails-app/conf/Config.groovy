@@ -65,6 +65,8 @@ environments {
     }
     production {
         grails.logging.jul.usebridge = false
+        grails.dbconsole.enabled = true
+
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
@@ -76,6 +78,16 @@ log4j = {
     //appenders {
     //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
     //}
+
+    log4j = {
+        error 'org.codehaus.groovy.grails',
+                'org.springframework',
+                'org.hibernate',
+                'net.sf.ehcache.hibernate'
+        debug 'grails.plugin.heroku',
+                'grails.plugin.memcached',
+                'grails.plugin.cloudsupport'
+    }
 
     error  'org.codehaus.groovy.grails.web.servlet',        // controllers
            'org.codehaus.groovy.grails.web.pages',          // GSP

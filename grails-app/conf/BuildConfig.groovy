@@ -15,7 +15,7 @@ grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
-        // excludes 'ehcache'
+        excludes 'ehcache'
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
@@ -36,6 +36,8 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.codehaus.org"
         //mavenRepo "http://download.java.net/maven/2/"
         //mavenRepo "http://repository.jboss.com/maven2/"
+        mavenRepo 'http://raykrueger.googlecode.com/svn/repository' // for hibernate-memcached
+        mavenRepo 'http://files.couchbase.com/maven2/'
     }
 
     dependencies {
@@ -63,5 +65,9 @@ grails.project.dependency.resolution = {
         compile ':cache:1.0.1'
         compile ':heroku:1.0.1'
         compile ':cloud-support:1.0.8'
+        compile ':memcached:1.0.3.2'
+        compile ':console:1.1'
+
+
     }
 }
