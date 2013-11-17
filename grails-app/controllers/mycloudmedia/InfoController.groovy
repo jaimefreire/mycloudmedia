@@ -1,6 +1,7 @@
 package mycloudmedia
 class InfoController {
     def index = {
-        [env: System.getenv()]
+        [test:"test",env: System.getenv()]
+
     }
 }

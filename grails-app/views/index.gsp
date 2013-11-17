@@ -59,7 +59,7 @@
     <div class='homePagePanel'>
         <div class='panelTop'></div>
         <div class='panelBody'>
-            <h1>Application Status</h1>
+            <h1>Application Status: ${test}</h1>
             <ul>
                 <li>App version: <g:meta name='app.version'/></li>
                 <li>Grails version: <g:meta name='app.grails.version'/></li>
