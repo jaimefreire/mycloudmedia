@@ -2,13 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f87170f0-f032-4e0b-afe9-461852c05281" name="Default" comment="Validation changes and new entities&#10;">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/_form.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/create.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/edit.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/list.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/list.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycloudmedia-grailsPlugins.iml" afterPath="$PROJECT_DIR$/mycloudmedia-grailsPlugins.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycloudmedia.iml" afterPath="$PROJECT_DIR$/mycloudmedia.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mycloudmedia.iws" />
@@ -139,7 +132,7 @@
       <file leaf-file-name="Usuario.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/mycloudmedia/Usuario.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="524" selection-end="524" vertical-scroll-proportion="-13.043478" vertical-offset="0" max-vertical-offset="555">
+            <state line="20" column="5" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="555">
               <folding />
             </state>
           </provider>
@@ -148,7 +141,7 @@
       <file leaf-file-name="UsuarioController.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/mycloudmedia/UsuarioController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="6" selection-start="92" selection-end="92" vertical-scroll-proportion="41.95652" vertical-offset="1025" max-vertical-offset="1620">
+            <state line="4" column="6" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1620">
               <folding />
             </state>
           </provider>
@@ -627,6 +620,7 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="LayoutCode.rearrangeEntriesGSP" value="false" />
+    <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -814,14 +808,16 @@
       <updated>1384628940397</updated>
       <workItem from="1384628945009" duration="18268000" />
       <workItem from="1384731595424" duration="226000" />
+      <workItem from="1384739202479" duration="281000" />
+      <workItem from="1384739550837" duration="119000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18494000" />
+    <option name="totallyTimeSpent" value="18894000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="774" extended-state="6" />
+    <frame x="0" y="22" width="1280" height="774" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -837,13 +833,12 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.008914101" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959481" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25957447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -851,6 +846,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1003,13 +999,13 @@
           <folding />
         </state>
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
       </provider>
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
       </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
+      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
         <state />
       </provider>
     </entry>
@@ -1049,9 +1045,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web-app/WEB-INF/sitemesh.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application.properties">
@@ -1061,9 +1055,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mycloudmedia.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/system.properties">
@@ -1073,37 +1065,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/info/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="188" column="40" selection-start="5405" selection-end="5405" vertical-scroll-proportion="-5.382979" vertical-offset="2567" max-vertical-offset="2985">
-          <folding />
-        </state>
+        <state line="188" column="40" selection-start="5405" selection-end="5405" vertical-scroll-proportion="-5.382979" vertical-offset="2567" max-vertical-offset="2985" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="381">
-          <folding />
-        </state>
+        <state line="0" column="3" selection-start="3" selection-end="3" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="381" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/error.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="392">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="392" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/grails/plugin/databasesession/PersistentSessionAttributeController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="109" selection-end="109" vertical-scroll-proportion="51.782608" vertical-offset="1251" max-vertical-offset="1620">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="109" selection-end="109" vertical-scroll-proportion="51.782608" vertical-offset="1251" max-vertical-offset="1620" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/grails/plugin/databasesession/PersistentSessionController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="1" selection-start="4290" selection-end="4290" vertical-scroll-proportion="-11.521739" vertical-offset="1250" max-vertical-offset="1620">
-          <folding />
-        </state>
+        <state line="101" column="1" selection-start="4290" selection-end="4290" vertical-scroll-proportion="-11.521739" vertical-offset="1250" max-vertical-offset="1620" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
@@ -1113,16 +1095,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="10" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="735">
-          <folding />
-        </state>
+        <state line="19" column="10" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" vertical-offset="135" max-vertical-offset="735" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="21" selection-start="3340" selection-end="3340" vertical-scroll-proportion="0.0" vertical-offset="1006" max-vertical-offset="1635">
-          <folding />
-        </state>
+        <state line="85" column="21" selection-start="3340" selection-end="3340" vertical-scroll-proportion="0.0" vertical-offset="1006" max-vertical-offset="1635" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
@@ -1137,23 +1115,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
-          <folding />
-        </state>
+        <state line="18" column="28" selection-start="699" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/database/UsuarioController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="27" selection-start="307" selection-end="307" vertical-scroll-proportion="-7.826087" vertical-offset="0" max-vertical-offset="1620">
-          <folding />
-        </state>
+        <state line="12" column="27" selection-start="307" selection-end="307" vertical-scroll-proportion="-7.826087" vertical-offset="0" max-vertical-offset="1620" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/database/MediaController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="109" selection-end="109" vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="1620">
-          <folding />
-        </state>
+        <state line="4" column="6" selection-start="109" selection-end="109" vertical-scroll-proportion="-2.6086957" vertical-offset="0" max-vertical-offset="1620" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/ApplicationResources.groovy">
@@ -1200,9 +1172,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/mycloudmedia/Rating.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="6" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="195">
-          <folding />
-        </state>
+        <state line="2" column="6" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="195" />
       </provider>
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
@@ -1240,7 +1210,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/mycloudmedia/Usuario.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="524" selection-end="524" vertical-scroll-proportion="-13.043478" vertical-offset="0" max-vertical-offset="555">
+        <state line="20" column="5" selection-start="524" selection-end="524" vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="555">
           <folding />
         </state>
       </provider>
@@ -1250,7 +1220,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/mycloudmedia/UsuarioController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="6" selection-start="92" selection-end="92" vertical-scroll-proportion="41.95652" vertical-offset="1025" max-vertical-offset="1620">
+        <state line="4" column="6" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1620">
           <folding />
         </state>
       </provider>
