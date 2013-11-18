@@ -1,5 +1,5 @@
 
-<%@ page import="database.Media" %>
+<%@ page import="mycloudmedia.Media" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -23,11 +23,38 @@
 			</g:if>
 			<ol class="property-list media">
 			
-				<g:if test="${mediaInstance?.author}">
+				<g:if test="${mediaInstance?.ISBN}">
 				<li class="fieldcontain">
-					<span id="author-label" class="property-label"><g:message code="media.author.label" default="Author" /></span>
+					<span id="ISBN-label" class="property-label"><g:message code="media.ISBN.label" default="ISBN" /></span>
 					
-						<span class="property-value" aria-labelledby="author-label"><g:link controller="author" action="show" id="${mediaInstance?.author?.id}">${mediaInstance?.author?.encodeAsHTML()}</g:link></span>
+						<span class="property-value" aria-labelledby="ISBN-label"><g:fieldValue bean="${mediaInstance}" field="ISBN"/></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${mediaInstance?.people}">
+				<li class="fieldcontain">
+					<span id="people-label" class="property-label"><g:message code="media.people.label" default="People" /></span>
+					
+						<span class="property-value" aria-labelledby="people-label"><g:link controller="person" action="show" id="${mediaInstance?.people?.id}">${mediaInstance?.people?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${mediaInstance?.rating}">
+				<li class="fieldcontain">
+					<span id="rating-label" class="property-label"><g:message code="media.rating.label" default="Rating" /></span>
+					
+						<span class="property-value" aria-labelledby="rating-label"><g:link controller="rating" action="show" id="${mediaInstance?.rating?.id}">${mediaInstance?.rating?.encodeAsHTML()}</g:link></span>
+					
+				</li>
+				</g:if>
+			
+				<g:if test="${mediaInstance?.releaseDate}">
+				<li class="fieldcontain">
+					<span id="releaseDate-label" class="property-label"><g:message code="media.releaseDate.label" default="Release Date" /></span>
+					
+						<span class="property-value" aria-labelledby="releaseDate-label"><g:formatDate date="${mediaInstance?.releaseDate}" /></span>
 					
 				</li>
 				</g:if>

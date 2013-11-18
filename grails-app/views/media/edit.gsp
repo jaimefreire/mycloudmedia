@@ -1,4 +1,4 @@
-<%@ page import="database.Media" %>
+<%@ page import="mycloudmedia.Media" %>
 <!DOCTYPE html>
 <html>
 	<head>

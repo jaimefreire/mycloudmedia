@@ -1,5 +1,5 @@
 
-<%@ page import="database.Media" %>
+<%@ page import="mycloudmedia.Media" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -24,7 +24,13 @@
 				<thead>
 					<tr>
 					
-						<th><g:message code="media.author.label" default="Author" /></th>
+						<g:sortableColumn property="ISBN" title="${message(code: 'media.ISBN.label', default: 'ISBN')}" />
+					
+						<th><g:message code="media.people.label" default="People" /></th>
+					
+						<th><g:message code="media.rating.label" default="Rating" /></th>
+					
+						<g:sortableColumn property="releaseDate" title="${message(code: 'media.releaseDate.label', default: 'Release Date')}" />
 					
 						<g:sortableColumn property="title" title="${message(code: 'media.title.label', default: 'Title')}" />
 					
@@ -34,7 +40,13 @@
 				<g:each in="${mediaInstanceList}" status="i" var="mediaInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${mediaInstance.id}">${fieldValue(bean: mediaInstance, field: "author")}</g:link></td>
+						<td><g:link action="show" id="${mediaInstance.id}">${fieldValue(bean: mediaInstance, field: "ISBN")}</g:link></td>
+					
+						<td>${fieldValue(bean: mediaInstance, field: "people")}</td>
+					
+						<td>${fieldValue(bean: mediaInstance, field: "rating")}</td>
+					
+						<td><g:formatDate date="${mediaInstance.releaseDate}" /></td>
 					
 						<td>${fieldValue(bean: mediaInstance, field: "title")}</td>
 					
