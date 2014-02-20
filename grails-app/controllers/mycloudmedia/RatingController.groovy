@@ -1,102 +1,103 @@
 package mycloudmedia
 
-import org.springframework.dao.DataIntegrityViolationException
+import grails.transaction.Transactional
 
+import static org.springframework.http.HttpStatus.*
+
+@Transactional(readOnly = true)
 class RatingController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index() {
-        redirect(action: "list", params: params)
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Rating.list(params), model: [ratingInstanceCount: Rating.count()]
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [ratingInstanceList: Rating.list(params), ratingInstanceTotal: Rating.count()]
+    def show(Rating ratingInstance) {
+        respond ratingInstance
     }
 
     def create() {
-        [ratingInstance: new Rating(params)]
+        respond new Rating(params)
     }
 
-    def save() {
-        def ratingInstance = new Rating(params)
-        if (!ratingInstance.save(flush: true)) {
-            render(view: "create", model: [ratingInstance: ratingInstance])
+    @Transactional
+    def save(Rating ratingInstance) {
+        if (ratingInstance == null) {
+            notFound()
             return
         }
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'rating.label', default: 'Rating'), ratingInstance.id])
-        redirect(action: "show", id: ratingInstance.id)
-    }
-
-    def show(Long id) {
-        def ratingInstance = Rating.get(id)
-        if (!ratingInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'rating.label', default: 'Rating'), id])
-            redirect(action: "list")
+        if (ratingInstance.hasErrors()) {
+            respond ratingInstance.errors, view: 'create'
             return
         }
 
-        [ratingInstance: ratingInstance]
-    }
+        ratingInstance.save flush: true
 
-    def edit(Long id) {
-        def ratingInstance = Rating.get(id)
-        if (!ratingInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'rating.label', default: 'Rating'), id])
-            redirect(action: "list")
-            return
-        }
-
-        [ratingInstance: ratingInstance]
-    }
-
-    def update(Long id, Long version) {
-        def ratingInstance = Rating.get(id)
-        if (!ratingInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'rating.label', default: 'Rating'), id])
-            redirect(action: "list")
-            return
-        }
-
-        if (version != null) {
-            if (ratingInstance.version > version) {
-                ratingInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'rating.label', default: 'Rating')] as Object[],
-                          "Another user has updated this Rating while you were editing")
-                render(view: "edit", model: [ratingInstance: ratingInstance])
-                return
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'ratingInstance.label', default: 'Rating'), ratingInstance.id])
+                redirect ratingInstance
             }
+            '*' { respond ratingInstance, [status: CREATED] }
         }
-
-        ratingInstance.properties = params
-
-        if (!ratingInstance.save(flush: true)) {
-            render(view: "edit", model: [ratingInstance: ratingInstance])
-            return
-        }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'rating.label', default: 'Rating'), ratingInstance.id])
-        redirect(action: "show", id: ratingInstance.id)
     }
 
-    def delete(Long id) {
-        def ratingInstance = Rating.get(id)
-        if (!ratingInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'rating.label', default: 'Rating'), id])
-            redirect(action: "list")
+    def edit(Rating ratingInstance) {
+        respond ratingInstance
+    }
+
+    @Transactional
+    def update(Rating ratingInstance) {
+        if (ratingInstance == null) {
+            notFound()
             return
         }
 
-        try {
-            ratingInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'rating.label', default: 'Rating'), id])
-            redirect(action: "list")
+        if (ratingInstance.hasErrors()) {
+            respond ratingInstance.errors, view: 'edit'
+            return
         }
-        catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'rating.label', default: 'Rating'), id])
-            redirect(action: "show", id: id)
+
+        ratingInstance.save flush: true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Rating.label', default: 'Rating'), ratingInstance.id])
+                redirect ratingInstance
+            }
+            '*' { respond ratingInstance, [status: OK] }
+        }
+    }
+
+    @Transactional
+    def delete(Rating ratingInstance) {
+
+        if (ratingInstance == null) {
+            notFound()
+            return
+        }
+
+        ratingInstance.delete flush: true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Rating.label', default: 'Rating'), ratingInstance.id])
+                redirect action: "index", method: "GET"
+            }
+            '*' { render status: NO_CONTENT }
+        }
+    }
+
+    protected void notFound() {
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'ratingInstance.label', default: 'Rating'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*' { render status: NOT_FOUND }
         }
     }
 }

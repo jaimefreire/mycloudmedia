@@ -15,11 +15,12 @@ grails.project.dependency.resolution = {
     // inherit Grails' default dependencies
     inherits("global") {
         // specify dependency exclusions here; for example, uncomment this to disable ehcache:
-        excludes 'ehcache'
+        //excludes 'ehcache'
     }
     log "error" // log level of Ivy resolver, either 'error', 'warn', 'info', 'debug' or 'verbose'
     checksums true // Whether to verify checksums on resolve
-    legacyResolve false // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
+    legacyResolve false
+    // whether to do a secondary resolve on plugin installation, not advised and here for backwards compatibility
 
     repositories {
         inherits true // Whether to inherit repository definitions from plugins
@@ -38,6 +39,8 @@ grails.project.dependency.resolution = {
         //mavenRepo "http://repository.jboss.com/maven2/"
         mavenRepo 'http://raykrueger.googlecode.com/svn/repository' // for hibernate-memcached
         mavenRepo 'http://files.couchbase.com/maven2/'
+        mavenRepo "http://oss.sonatype.org/content/repositories/releases/"
+
     }
 
     dependencies {
@@ -49,7 +52,8 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        runtime ":hibernate:$grailsVersion"
+        runtime ":hibernate:3.6.10.4"
+
         runtime ":jquery:1.8.3"
         runtime ":resources:1.2"
         runtime ":database-migration:1.3.2"
@@ -59,14 +63,25 @@ grails.project.dependency.resolution = {
         //runtime ":cached-resources:1.0"
         //runtime ":yui-minify-resources:0.1.5"
 
-        build ":tomcat:$grailsVersion"
+        build ":tomcat:2.2.4"
 
+        compile ":scaffolding:2.0.0"
 
         compile ':cache:1.0.1'
-        compile ':heroku:1.0.1'
+        compile(':heroku:1.0.1') {
+            exclude 'database-session'
+        }
         compile ':cloud-support:1.0.8'
         compile ':memcached:1.0.3.2'
         compile ':console:1.1'
+        //compile ":elasticsearch-gorm:0.0.2"
+        compile ":hibernate:3.6.10.4"
+        compile ":mongodb:1.3.1"
+        //Video support
+        compile ":gvps:0.5"
+        //Paypal
+        compile ":paypal:0.6.10"
+        compile ":calendar:1.2.1"
 
 
     }

@@ -58,6 +58,7 @@ grails.exceptionresolver.params.exclude = ['password']
 
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
+grails.plugin.databasesession.enabled = false
 
 environments {
     development {
@@ -75,9 +76,18 @@ environments {
 log4j = {
     // Example of changing the log pattern for the default console appender:
     //
-    //appenders {
-    //    console name:'stdout', layout:pattern(conversionPattern: '%c{2} %m%n')
-    //}
+    appenders {
+        console name: 'stdout', layout: pattern(conversionPattern: '%c{2} %m%n')
+    }
+
+    root {
+        error "stdout"
+    }
+
+    // we are saying default is trace for the console,
+    // but for this package we are setting default as debug
+    debug "grails.app.controller"
+
 
     log4j = {
         error 'org.codehaus.groovy.grails',
@@ -101,3 +111,88 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
 }
+
+elasticSearch {
+
+    datastoreImpl = 'mongoDatastore'
+
+}
+
+
+
+video {
+    location = "/tmp/" // or shared filesystem drive for a cluster yamdi{
+    yamdi {
+        path = "/bin/yamdi" // FLV metadata injector (IF TYPE= FLV)
+    }
+
+/*
+ffmpeg {
+    fileExtension = "flv" // use flv or mp4
+    conversionArgs = "-b 600k -r 24 -ar 22050 -ab 96k" path="/bin/ffmpeg"
+    makethumb = "-an -ss 00:00:03 -an -r 2 -vframes 1 -y -f mjpeg"
+    }
+*/
+
+    ffmpeg {
+        fileExtension = "mp4"  // use flv or mp4
+        conversionArgs = "-b 600k -r 24 -ar 22050 -ab 96k"
+        concatArgs = "-crf 27 -threads 4"
+        path = "/bin/ffmpeg"
+        makethumb = "-an -ss 00:00:03 -an -r 2 -vframes 1 -y -f mjpeg"
+    }
+
+    ffprobe {
+        path = "/bin/ffprobe" // finds length of movie
+        params = ""
+    }
+
+    flowplayer {
+        version = "3.1.2" // use empty string for no version on file
+    }
+    swfobject {
+        version = "" // used for jw-flv player, empty to not specify version
+    }
+    qtfaststart {
+        path = "/bin/qt-faststart" // if ffmpeg.fileExtension == mp4 used to rearrange metadata
+    }
+
+}
+
+
+environments {
+    production {
+        grails.paypal.server = "https://www.paypal.com/cgi-bin/webscr"
+        grails.paypal.email = "jaime.freire@gmail.com"
+        grails.serverURL = "http://www.grails.org"
+    }
+    development {
+        grails.paypal.server = "https://www.sandbox.paypal.com/cgi-bin/webscr"
+        grails.paypal.email = "testpp_1211202427_biz@g2one.com"
+        grails.serverURL = "http://812.99.101.131"
+    }
+}
+
+// Uncomment and edit the following lines to start using Grails encoding & escaping improvements
+
+/* remove this line 
+// GSP settings
+grails {
+    views {
+        gsp {
+            encoding = 'UTF-8'
+            htmlcodec = 'xml' // use xml escaping instead of HTML4 escaping
+            codecs {
+                expression = 'html' // escapes values inside null
+                scriptlet = 'none' // escapes output from scriptlets in GSPs
+                taglib = 'none' // escapes output from taglibs
+                staticparts = 'none' // escapes output from static template parts
+            }
+        }
+        // escapes all not-encoded output at final stage of outputting
+        filteringCodecForContentType {
+            //'text/html' = 'html'
+        }
+    }
+}
+remove this line */

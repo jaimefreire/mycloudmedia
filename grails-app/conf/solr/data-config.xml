@@ -1,0 +1,23 @@
+<dataConfig>
+    <dataSource driver="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/imdb" user="root" password=""
+                batchSize="-1"/>
+    <document name="movies">
+        <entity name="item" query="select title as title, year as year , g.genre as genre, a.name as name, sex as gender, d.name as director, c.country as country from movies m
+            join movies2actors ma on m.movieid=ma.movieid
+            join actors a on a.actorid=ma.actorid
+            join movies2directors md on m.movieid=md.movieid
+            join directors d on d.directorid=md.directorid
+            join countries c on c.movieid=md.movieid
+            join genres g on g.movieid=m.movieid ">
+
+            <field column="TITLE" name="title"/>
+            <field column="YEAR" name="year"/>
+            <field column="GENRE" name="genre"/>
+            <field column="NAME" name="name"/>
+            <field column="GENDER" name="sex"/>
+            <field column="DIRECTOR" name="director"/>
+            <field column="COUNTRY" name="country"/>
+        </entity>
+    </document>
+</dataConfig>
+

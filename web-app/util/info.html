@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="../css/main.css" media="screen"/>
+
+<head>
+    <meta name="layout" content="main"/>
+    <title>Bienvenido a MyMedia</title>
+    <style type="text/css" media="screen">
+        #status {
+            background-color: #eee;
+            border: .2em solid #fff;
+            margin: 2em 2em 1em;
+            padding: 1em;
+            width: 12em;
+            float: left;
+            -moz-box-shadow: 0px 0px 1.25em #ccc;
+            -webkit-box-shadow: 0px 0px 1.25em #ccc;
+            box-shadow: 0px 0px 1.25em #ccc;
+            -moz-border-radius: 0.6em;
+            -webkit-border-radius: 0.6em;
+            border-radius: 0.6em;
+        }
+
+        .ie6 #status {
+            display: inline; /* float double margin fix http://www.positioniseverything.net/explorer/doubled-margin.html */
+        }
+
+        #status ul {
+            font-size: 0.9em;
+            list-style-type: none;
+            margin-bottom: 0.6em;
+            padding: 0;
+        }
+
+        #status li {
+            line-height: 1.3;
+        }
+
+        #status h1 {
+            text-transform: uppercase;
+            font-size: 1.1em;
+            margin: 0 0 0.3em;
+        }
+
+        #page-body {
+            margin: 2em 1em 1.25em 18em;
+        }
+
+        h2 {
+            margin-top: 1em;
+            margin-bottom: 0.3em;
+            font-size: 1em;
+        }
+
+        p {
+            line-height: 1.5;
+            margin: 0.25em 0;
+        }
+
+        #controller-list ul {
+            list-style-position: inside;
+        }
+
+        #controller-list li {
+            line-height: 1.3;
+            list-style-position: inside;
+            margin: 0.25em 0;
+        }
+
+        @media screen and (max-width: 480px) {
+            #status {
+                display: none;
+            }
+
+            #page-body {
+                margin: 0 1em 1em;
+            }
+
+            #page-body h1 {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<a href="#page-body" class="skip">
+    <g:message code="default.link.skip.label" default="Skip to content&hellip;"/>
+</a>
+
+<div id="status" role="complementary">
+    <h1>Menu</h1>
+    <ul>
+        <li><a href="/MyCloudMedia/">Inicio</a></li>
+    </ul>
+    <ul>
+        <li><h2>OTROS PROYECTOS</h2></li>
+        <li><a href="https://www.netflix.com">Netflix</a></li>
+        <li><a href="https://mubi.com">Mubi</a></li>
+        <li><a href="http://yomvi.plus.es">Yomvi</a></li>
+        <li><a href="http://www.totalchannel.com">Total Channel</a></li>
+        <br>
+    </ul>
+    <ul>
+        <li><h2>ENLACES</h2></li>
+        <li><a href="http://www.uned.es">UNED</a></li>
+        <li><a href="mailto:jaime.freire@gmail.com">Contacto</a></li>
+    </ul>
+</div>
+<div id="page-body" role="main">
+    <br>
+
+    <h1>Qué es MyMedia?</h1>
+
+    <p>MyMedia es un proyecto final de carrera de Ingeniería informática desarrollado en la UNED</p>
+    <ul>
+        <li>El objetivo es mejorar la experiencia del usuario utilizando la tecnología.</li>
+        <li>Almacenando e indexando de forma transparente sus preferencias.</li>
+        <li>Y lograr un sistema eficiente, flexible y dirigido por sus usuarios.</li>
+        <li>Mucho más!</li>
+        <br>
+
+        <iframe width="560" height="315" src="//www.youtube.com/embed/QEOPalKP0TA" frameborder="1"
+                allowfullscreen></iframe>
+
+    </ul>
+    </p>
+</div>
+</body>
+<footer class="footer">MyMedia es un Proyecto final de carrera desarrollado para la UNED por Jaime Freire</footer>
+</html>

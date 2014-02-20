@@ -1,102 +1,107 @@
 package mycloudmedia
 
-import org.springframework.dao.DataIntegrityViolationException
+import grails.transaction.Transactional
 
+import static org.springframework.http.HttpStatus.*
+
+@Transactional(readOnly = true)
 class UsuarioController {
 
-    static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index() {
-        redirect(action: "list", params: params)
+    def index(Integer max) {
+        params.max = Math.min(max ?: 10, 100)
+        respond Usuario.list(params), model: [usuarioInstanceCount: Usuario.count()]
     }
 
-    def list(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        [usuarioInstanceList: Usuario.list(params), usuarioInstanceTotal: Usuario.count()]
+    def show(Usuario usuarioInstance) {
+        respond usuarioInstance
     }
 
     def create() {
-        [usuarioInstance: new Usuario(params)]
+        respond new Usuario(params);
     }
 
-    def save() {
-        def usuarioInstance = new Usuario(params)
-        if (!usuarioInstance.save(flush: true)) {
-            render(view: "create", model: [usuarioInstance: usuarioInstance])
+    @Transactional
+    def save(Usuario usuarioInstance) {
+        if (usuarioInstance == null) {
+            notFound()
             return
         }
 
-        flash.message = message(code: 'default.created.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuarioInstance.id])
-        redirect(action: "show", id: usuarioInstance.id)
-    }
 
-    def show(Long id) {
-        def usuarioInstance = Usuario.get(id)
-        if (!usuarioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
-            redirect(action: "list")
+        if (usuarioInstance.hasErrors()) {
+            respond usuarioInstance.errors, view: 'create'
             return
         }
 
-        [usuarioInstance: usuarioInstance]
-    }
 
-    def edit(Long id) {
-        def usuarioInstance = Usuario.get(id)
-        if (!usuarioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
-            redirect(action: "list")
-            return
-        }
 
-        [usuarioInstance: usuarioInstance]
-    }
+        usuarioInstance.save flush: true
 
-    def update(Long id, Long version) {
-        def usuarioInstance = Usuario.get(id)
-        if (!usuarioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
-            redirect(action: "list")
-            return
-        }
-
-        if (version != null) {
-            if (usuarioInstance.version > version) {
-                usuarioInstance.errors.rejectValue("version", "default.optimistic.locking.failure",
-                          [message(code: 'usuario.label', default: 'Usuario')] as Object[],
-                          "Another user has updated this Usuario while you were editing")
-                render(view: "edit", model: [usuarioInstance: usuarioInstance])
-                return
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'usuarioInstance.label', default: 'Usuario'), usuarioInstance.id])
+                redirect usuarioInstance
             }
+            '*' { respond usuarioInstance, [status: CREATED] }
         }
-
-        usuarioInstance.properties = params
-
-        if (!usuarioInstance.save(flush: true)) {
-            render(view: "edit", model: [usuarioInstance: usuarioInstance])
-            return
-        }
-
-        flash.message = message(code: 'default.updated.message', args: [message(code: 'usuario.label', default: 'Usuario'), usuarioInstance.id])
-        redirect(action: "show", id: usuarioInstance.id)
     }
 
-    def delete(Long id) {
-        def usuarioInstance = Usuario.get(id)
-        if (!usuarioInstance) {
-            flash.message = message(code: 'default.not.found.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
-            redirect(action: "list")
+
+    def edit(Usuario usuarioInstance) {
+        respond usuarioInstance
+    }
+
+    @Transactional
+    def update(Usuario usuarioInstance) {
+        if (usuarioInstance == null) {
+            notFound()
             return
         }
 
-        try {
-            usuarioInstance.delete(flush: true)
-            flash.message = message(code: 'default.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
-            redirect(action: "list")
+        if (usuarioInstance.hasErrors()) {
+            respond usuarioInstance.errors, view: 'edit'
+            return
         }
-        catch (DataIntegrityViolationException e) {
-            flash.message = message(code: 'default.not.deleted.message', args: [message(code: 'usuario.label', default: 'Usuario'), id])
-            redirect(action: "show", id: id)
+
+        usuarioInstance.save flush: true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.updated.message', args: [message(code: 'Usuario.label', default: 'Usuario'), usuarioInstance.id])
+                redirect usuarioInstance
+            }
+            '*' { respond usuarioInstance, [status: OK] }
+        }
+    }
+
+    @Transactional
+    def delete(Usuario usuarioInstance) {
+
+        if (usuarioInstance == null) {
+            notFound()
+            return
+        }
+
+        usuarioInstance.delete flush: true
+
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.deleted.message', args: [message(code: 'Usuario.label', default: 'Usuario'), usuarioInstance.id])
+                redirect action: "index", method: "GET"
+            }
+            '*' { render status: NO_CONTENT }
+        }
+    }
+
+    protected void notFound() {
+        request.withFormat {
+            form {
+                flash.message = message(code: 'default.not.found.message', args: [message(code: 'usuarioInstance.label', default: 'Usuario'), params.id])
+                redirect action: "index", method: "GET"
+            }
+            '*' { render status: NOT_FOUND }
         }
     }
 }

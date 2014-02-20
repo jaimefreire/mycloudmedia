@@ -1,4 +1,3 @@
-<%@ page import="mycloudmedia.Usuario" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -11,8 +10,9 @@
 		<div class="nav" role="navigation">
 			<ul>
 				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-			</ul>
+                <li><g:link class="list" action="index"><g:message code="default.list.label"
+                                                                   args="[entityName]"/></g:link></li>
+            </ul>
 		</div>
 		<div id="create-usuario" class="content scaffold-create" role="main">
 			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
@@ -26,8 +26,8 @@
 				</g:eachError>
 			</ul>
 			</g:hasErrors>
-			<g:form action="save" >
-				<fieldset class="form">
+            <g:form url="[resource: usuarioInstance, action: 'save']">
+                <fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
