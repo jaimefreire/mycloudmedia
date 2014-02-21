@@ -2,118 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f87170f0-f032-4e0b-afe9-461852c05281" name="Default" comment="Validation changes and new entities&#10;">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/jmdb.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/mysql-connector-java-5.0.8-bin.jar" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/groovy/util/CustomPropertyEditorRegistrar.groovy" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/grails-app/conf/solr/data-config.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web-app/util/info.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/database/MediaController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/database/UsuarioController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/grails/plugin/databasesession/PersistentSessionAttributeController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/grails/plugin/databasesession/PersistentSessionAttributeValueController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/grails/plugin/databasesession/PersistentSessionController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/GenresController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/InfoController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/MediaController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/PersonController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/ProfessionsController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/RatingController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/ReviewsController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/SubscriptionController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/controllers/mycloudmedia/UsuarioController.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Genres.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Media.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Person.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Professions.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Rating.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Reviews.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Subscription.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/error.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/genres/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/genres/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/genres/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/genres/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/genres/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/index.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/info/index.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/layouts/main.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/media/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/media/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/media/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/media/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/media/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSession/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSession/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSession/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSession/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSession/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttribute/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttribute/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttribute/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttribute/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttribute/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttributeValue/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttributeValue/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttributeValue/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttributeValue/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/persistentSessionAttributeValue/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/person/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/person/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/person/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/person/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/person/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/professions/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/professions/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/professions/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/professions/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/professions/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/rating/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/rating/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/rating/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/rating/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/rating/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/reviews/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/reviews/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/reviews/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/reviews/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/reviews/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/subscription/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/subscription/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/subscription/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/subscription/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/subscription/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/usuario/_form.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/usuario/create.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/usuario/edit.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/usuario/list.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/grails-app/views/usuario/show.gsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/grails/plugin/databasesession/PersistentSessionAttributeControllerTests.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/grails/plugin/databasesession/PersistentSessionAttributeValueControllerTests.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test/unit/grails/plugin/databasesession/PersistentSessionControllerTests.groovy" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web-app/images/grails_logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web-app/images/leftnav_btm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web-app/images/leftnav_midstretch.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web-app/images/leftnav_top.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/apple-touch-icon-retina.png" afterPath="$PROJECT_DIR$/web-app/images/apple-touch-icon-retina.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/apple-touch-icon.png" afterPath="$PROJECT_DIR$/web-app/images/apple-touch-icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/favicon.ico" afterPath="$PROJECT_DIR$/web-app/images/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/images/grails_logo.png" afterPath="$PROJECT_DIR$/web-app/images/grails_logo.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.project" afterPath="$PROJECT_DIR$/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/Config.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/Config.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Usuario.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/mycloudmedia/Usuario.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application.properties" afterPath="$PROJECT_DIR$/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/WEB-INF/applicationContext.xml" afterPath="$PROJECT_DIR$/web-app/WEB-INF/applicationContext.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/main.css" afterPath="$PROJECT_DIR$/web-app/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/i18n/messages.properties" afterPath="$PROJECT_DIR$/grails-app/i18n/messages.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/_state/global-2" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/0/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/1/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/2/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/3/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/4/index/segments.gen" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/0/index/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/1/index/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/2/index/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/3/index/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/4/index/segments_1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/_state/state-8" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/0/translog/translog-1385265932246" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/1/translog/translog-1385265932246" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/2/translog/translog-1385265932333" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/3/translog/translog-1385265932360" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/4/translog/translog-1385265932398" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/1/index/_checksums-1385265932257" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/0/index/_checksums-1385265932268" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/2/index/_checksums-1385265932334" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/3/index/_checksums-1385265932360" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/4/index/_checksums-1385265932399" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/0/_state/state-4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/1/_state/state-4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/2/_state/state-4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/3/_state/state-4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/elasticsearch/nodes/0/indices/mycloudmedia/4/_state/state-4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jdk-7u45-macosx-x64.dmg" afterPath="$PROJECT_DIR$/jdk-7u45-macosx-x64.dmg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycloudmedia-grailsPlugins.iml" afterPath="$PROJECT_DIR$/mycloudmedia-grailsPlugins.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mycloudmedia.iml" afterPath="$PROJECT_DIR$/mycloudmedia.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/spring/resources.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/spring/resources.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/WEB-INF/tld/spring.tld" afterPath="$PROJECT_DIR$/web-app/WEB-INF/tld/spring.tld" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="mycloudmedia.iws" />
@@ -183,7 +101,7 @@
       <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/subscription/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="0" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.75342464" vertical-offset="1015" max-vertical-offset="1800">
+            <state line="69" column="0" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.75342464" vertical-offset="1090" max-vertical-offset="1845">
               <folding />
             </state>
           </provider>
@@ -195,7 +113,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="30" selection-start="274" selection-end="280" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="405">
+            <state line="17" column="30" selection-start="279" selection-end="285" vertical-scroll-proportion="-0.0" vertical-offset="255" max-vertical-offset="405">
               <folding />
             </state>
           </provider>
@@ -204,7 +122,7 @@
       <file leaf-file-name="show.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="190" selection-start="4493" selection-end="4493" vertical-scroll-proportion="-7.255319" vertical-offset="1099" max-vertical-offset="1755">
+            <state line="116" column="84" selection-start="6464" selection-end="6464" vertical-scroll-proportion="-0.0" vertical-offset="1740" max-vertical-offset="2070">
               <folding />
             </state>
           </provider>
@@ -213,12 +131,12 @@
       <file leaf-file-name="create.gsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/create.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="43" selection-start="715" selection-end="715" vertical-scroll-proportion="-0.23404256" vertical-offset="214" max-vertical-offset="660">
+            <state line="16" column="43" selection-start="802" selection-end="802" vertical-scroll-proportion="-0.0" vertical-offset="240" max-vertical-offset="675">
               <folding>
-                <marker date="1390633396000" expanded="true" signature="856:928" placeholder="..." />
-                <marker date="1390633396000" expanded="true" signature="971:1257" placeholder="..." />
-                <marker date="1390633396000" expanded="true" signature="1051:1230" placeholder="..." />
-                <marker date="1390633396000" expanded="true" signature="1317:1581" placeholder="..." />
+                <marker date="1392939889000" expanded="true" signature="943:1015" placeholder="..." />
+                <marker date="1392939889000" expanded="true" signature="1058:1344" placeholder="..." />
+                <marker date="1392939889000" expanded="true" signature="1138:1317" placeholder="..." />
+                <marker date="1392939889000" expanded="true" signature="1415:1690" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -227,7 +145,7 @@
       <file leaf-file-name="Config.groovy" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="172" column="35" selection-start="5913" selection-end="5913" vertical-scroll-proportion="-16.307692" vertical-offset="2156" max-vertical-offset="3075">
+            <state line="171" column="35" selection-start="5963" selection-end="5963" vertical-scroll-proportion="-0.0" vertical-offset="2565" max-vertical-offset="3060">
               <folding />
             </state>
           </provider>
@@ -281,7 +199,7 @@
       <file leaf-file-name="PaypalTagLib.groovy" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$USER_HOME$/.grails/2.3.5/projects/MyCloudMedia/plugins/paypal-0.6.10/grails-app/taglib/org/grails/paypal/PaypalTagLib.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="20" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.2741117" vertical-offset="747" max-vertical-offset="1365">
+            <state line="85" column="79" selection-start="4215" selection-end="4215" vertical-scroll-proportion="0.8543689" vertical-offset="747" max-vertical-offset="1365">
               <folding />
             </state>
           </provider>
@@ -587,40 +505,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycloudmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycloudmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DateTest" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycloudmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mycloudmedia-grailsPlugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -649,6 +533,22 @@
     <property name="options.searchVisible" value="true" />
     <property name="SearchEverywhereHistory" value="7&gt;&#10;&lt;/g:link&gt;" />
     <property name="LayoutCode.rearrangeEntriesGroovy" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="97" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="99" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="102" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="897" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="97" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="99" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="102" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="897" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -895,12 +795,17 @@
       <workItem from="1390950588449" duration="672000" />
       <workItem from="1391934824527" duration="7721000" />
       <workItem from="1392194339586" duration="2057000" />
-      <workItem from="1392401061650" duration="31516000" />
+      <workItem from="1392401061650" duration="32079000" />
     </task>
+    <task id="LOCAL-00001" summary="New version, user creation and subscription">
+      <created>1392939990410</created>
+      <updated>1392939990410</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128407000" />
+    <option name="totallyTimeSpent" value="128970000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -926,7 +831,7 @@
     <frame x="0" y="22" width="1280" height="774" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32844576" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5557185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293556" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -948,7 +853,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22132471" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.008914101" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2819063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2819063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3079179" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1003,7 +908,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Validation changes and new entities&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Validation changes and new entities&#10;" />
+    <MESSAGE value="New version, user creation and subscription" />
+    <option name="LAST_COMMIT_MESSAGE" value="New version, user creation and subscription" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1257,9 +1163,7 @@
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/mycloudmedia/UsuarioController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state line="53" column="0" selection-start="1303" selection-end="1303" vertical-scroll-proportion="18.0" vertical-offset="1209" max-vertical-offset="1740">
-          <folding>
-            <element signature="e#22#59#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1352,12 +1256,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/create.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="43" selection-start="715" selection-end="715" vertical-scroll-proportion="-0.23404256" vertical-offset="214" max-vertical-offset="660">
+        <state line="16" column="43" selection-start="802" selection-end="802" vertical-scroll-proportion="-0.0" vertical-offset="240" max-vertical-offset="675">
           <folding>
-            <marker date="1390633396000" expanded="true" signature="856:928" placeholder="..." />
-            <marker date="1390633396000" expanded="true" signature="971:1257" placeholder="..." />
-            <marker date="1390633396000" expanded="true" signature="1051:1230" placeholder="..." />
-            <marker date="1390633396000" expanded="true" signature="1317:1581" placeholder="..." />
+            <marker date="1392939889000" expanded="true" signature="943:1015" placeholder="..." />
+            <marker date="1392939889000" expanded="true" signature="1058:1344" placeholder="..." />
+            <marker date="1392939889000" expanded="true" signature="1138:1317" placeholder="..." />
+            <marker date="1392939889000" expanded="true" signature="1415:1690" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1367,14 +1271,14 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="30" selection-start="274" selection-end="280" vertical-scroll-proportion="-4.8" vertical-offset="0" max-vertical-offset="405">
+        <state line="17" column="30" selection-start="279" selection-end="285" vertical-scroll-proportion="-0.0" vertical-offset="255" max-vertical-offset="405">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/Config.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="172" column="35" selection-start="5913" selection-end="5913" vertical-scroll-proportion="-16.307692" vertical-offset="2156" max-vertical-offset="3075">
+        <state line="171" column="35" selection-start="5963" selection-end="5963" vertical-scroll-proportion="-0.0" vertical-offset="2565" max-vertical-offset="3060">
           <folding />
         </state>
       </provider>
@@ -1418,21 +1322,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="190" selection-start="4493" selection-end="4493" vertical-scroll-proportion="-7.255319" vertical-offset="1099" max-vertical-offset="1755">
+        <state line="116" column="84" selection-start="6464" selection-end="6464" vertical-scroll-proportion="-0.0" vertical-offset="1740" max-vertical-offset="2070">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/subscription/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="2843" selection-end="2843" vertical-scroll-proportion="0.75342464" vertical-offset="1015" max-vertical-offset="1800">
+        <state line="69" column="0" selection-start="3446" selection-end="3446" vertical-scroll-proportion="0.75342464" vertical-offset="1090" max-vertical-offset="1845">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/.grails/2.3.5/projects/MyCloudMedia/plugins/paypal-0.6.10/grails-app/taglib/org/grails/paypal/PaypalTagLib.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="20" selection-start="2674" selection-end="2674" vertical-scroll-proportion="0.2741117" vertical-offset="747" max-vertical-offset="1365">
+        <state line="85" column="79" selection-start="4215" selection-end="4215" vertical-scroll-proportion="0.8543689" vertical-offset="747" max-vertical-offset="1365">
           <folding />
         </state>
       </provider>
