@@ -241,6 +241,10 @@ fieldset,
     float: left;
 }
 
+.fieldcontain .property-label2 {
+    float: right;
+}
+
 .fieldcontain .property-value {
     display: block;
     margin-left: 27%;

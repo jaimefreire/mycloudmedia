@@ -92,7 +92,7 @@
         <li>Iniciar sesión: <g:meta name="app.version"/></li>
         <li><g:link action="index" controller="usuario">Mostrar usuarios</g:link></li>
 
-        <li>Últimas novedades: <g:meta name="app.version"/></li>
+        <li><g:link action="list" controller="movie">Últimas novedades!</g:link></li>
     </ul>
 </div>
 

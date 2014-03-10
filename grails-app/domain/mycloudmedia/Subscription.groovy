@@ -10,6 +10,7 @@ class Subscription {
     static belongsTo = [Usuario]
     String type
 
+
     static constraints = {
         type(blank: false, inList: ['flat-week', 'flat-month', 'one', 'five', 'inactiva'])
 

@@ -76,12 +76,13 @@ grails.project.dependency.resolution = {
         compile ':console:1.1'
         //compile ":elasticsearch-gorm:0.0.2"
         compile ":hibernate:3.6.10.4"
-        compile ":mongodb:1.3.1"
+        //compile ":mongodb:1.3.1"
         //Video support
         compile ":gvps:0.5"
         //Paypal
         compile ":paypal:0.6.10"
         compile ":calendar:1.2.1"
+        compile ":executor:0.3"
 
 
     }

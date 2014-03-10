@@ -31,13 +31,13 @@
             <g:sortableColumn property="email" title="${message(code: 'usuario.email.label', default: 'Email')}"/>
 
             <g:sortableColumn property="password"
-                              title="${message(code: 'usuario.password.label', default: 'Password')}"/>
+                              title="${message(code: 'usuario.password.label', default: 'Contraseña')}"/>
 
             <g:sortableColumn property="creditcard"
-                              title="${message(code: 'usuario.creditcard.label', default: 'Creditcard')}"/>
+                              title="${message(code: 'usuario.creditcard.label', default: 'Tarjeta')}"/>
 
             <g:sortableColumn property="fechaAlta"
-                              title="${message(code: 'usuario.fechaAlta.label', default: 'Fecha Alta')}"/>
+                              title="${message(code: 'usuario.fechaAlta.label', default: 'Fecha de Alta')}"/>
 
             <th><g:message code="usuario.subscripcion.label" default="Subscripcion"/></th>
 
@@ -50,13 +50,16 @@
                 <td><g:link action="show"
                             id="${usuarioInstance.id}">${fieldValue(bean: usuarioInstance, field: "email")}</g:link></td>
 
-                <td>${fieldValue(bean: usuarioInstance, field: "password")}</td>
+                <td><g:passwordField
+                        bean="${usuarioInstance}" name="password" field="password" disabled="true"/></td>
 
-                <td>${fieldValue(bean: usuarioInstance, field: "creditcard")}</td>
+                <td><g:formatCC number="${usuarioInstance.creditcard}"/></td>
 
-                <td><g:formatDate date="${usuarioInstance.fechaAlta}" format="dd/MM/yyyy hh:mm:ss"/></td>
+                <td><g:formatDate date="${usuarioInstance.fechaAlta}" format="dd/MM/yyyy HH:mm:ss"/></td>
 
-                <td>${fieldValue(bean: usuarioInstance.subscripcion, field: "type")}</td>
+                <td>${fieldValue(bean: usuarioInstance.subscripcion, field: "type")}<g:link
+                        controller="subscription" action="show"
+                        id="${usuarioInstance?.subscripcion?.id}">Modificar</g:link></td>
 
             </tr>
         </g:each>

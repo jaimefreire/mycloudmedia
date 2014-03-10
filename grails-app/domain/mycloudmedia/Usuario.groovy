@@ -17,7 +17,7 @@ class Usuario {
     String birthDate
     int age
 
-    //Static constructor
+    // constructor
     {
         fechaAlta = new Date()
         subscripcion = new Subscription('inactiva')

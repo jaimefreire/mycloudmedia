@@ -11,5 +11,12 @@ class UrlMappings {
         "/"(view: "index")
 
         "500"(view: '/error')
+
+        "/test/submit" {
+            controller = "test"
+            action = "index"
+
+        }
+
     }
 }

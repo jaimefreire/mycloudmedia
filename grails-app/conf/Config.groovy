@@ -15,18 +15,18 @@ grails.project.groupId = appName // change this to alter the default package nam
 grails.mime.file.extensions = true // enables the parsing of file extensions from URLs into the request format
 grails.mime.use.accept.header = false
 grails.mime.types = [
-    all:           '*/*',
-    atom:          'application/atom+xml',
-    css:           'text/css',
-    csv:           'text/csv',
-    form:          'application/x-www-form-urlencoded',
-    html:          ['text/html','application/xhtml+xml'],
-    js:            'text/javascript',
-    json:          ['application/json', 'text/json'],
-    multipartForm: 'multipart/form-data',
-    rss:           'application/rss+xml',
-    text:          'text/plain',
-    xml:           ['text/xml', 'application/xml']
+        all: '*/*',
+        atom: 'application/atom+xml',
+        css: 'text/css',
+        csv: 'text/csv',
+        form: 'application/x-www-form-urlencoded',
+        html: ['text/html', 'application/xhtml+xml'],
+        js: 'text/javascript',
+        json: ['application/json', 'text/json'],
+        multipartForm: 'multipart/form-data',
+        rss: 'application/rss+xml',
+        text: 'text/plain',
+        xml: ['text/xml', 'application/xml']
 ]
 
 // URL Mapping Cache Max Size, defaults to 5000
@@ -51,7 +51,7 @@ grails.enable.native2ascii = true
 // packages to include in Spring bean scanning
 grails.spring.bean.packages = []
 // whether to disable processing of multi part requests
-grails.web.disable.multipart=false
+grails.web.disable.multipart = false
 
 // request parameters to mask when logging exceptions
 grails.exceptionresolver.params.exclude = ['password']
@@ -59,6 +59,7 @@ grails.exceptionresolver.params.exclude = ['password']
 // configure auto-caching of queries by default (if false you can cache individual queries with 'cache: true')
 grails.hibernate.cache.queries = false
 grails.plugin.databasesession.enabled = false
+
 
 environments {
     development {
@@ -72,6 +73,12 @@ environments {
     }
 }
 
+backgroundThread {
+    queueSize = 10 // Maximum number of tasks to queue up
+    threadCount = 3 // Number of threads processing background tasks.
+    tasksPerDrain = 100 // See Note
+}
+
 // log4j configuration
 log4j = {
     // Example of changing the log pattern for the default console appender:
@@ -81,7 +88,7 @@ log4j = {
     }
 
     root {
-        error "stdout"
+        info "stdout"
     }
 
     // we are saying default is trace for the console,
@@ -99,29 +106,31 @@ log4j = {
                 'grails.plugin.cloudsupport'
     }
 
-    error  'org.codehaus.groovy.grails.web.servlet',        // controllers
-           'org.codehaus.groovy.grails.web.pages',          // GSP
-           'org.codehaus.groovy.grails.web.sitemesh',       // layouts
-           'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
-           'org.codehaus.groovy.grails.web.mapping',        // URL mapping
-           'org.codehaus.groovy.grails.commons',            // core / classloading
-           'org.codehaus.groovy.grails.plugins',            // plugins
-           'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
-           'org.springframework',
-           'org.hibernate',
-           'net.sf.ehcache.hibernate'
+    error 'org.codehaus.groovy.grails.web.servlet',        // controllers
+            'org.codehaus.groovy.grails.web.pages',          // GSP
+            'org.codehaus.groovy.grails.web.sitemesh',       // layouts
+            'org.codehaus.groovy.grails.web.mapping.filter', // URL mapping
+            'org.codehaus.groovy.grails.web.mapping',        // URL mapping
+            'org.codehaus.groovy.grails.commons',            // core / classloading
+            'org.codehaus.groovy.grails.plugins',            // plugins
+            'org.codehaus.groovy.grails.orm.hibernate',      // hibernate integration
+            'org.springframework',
+            'org.hibernate',
+            'net.sf.ehcache.hibernate'
 }
 
+/*
 elasticSearch {
 
     datastoreImpl = 'mongoDatastore'
 
 }
+*/
 
 
 
 video {
-    location = "/tmp/" // or shared filesystem drive for a cluster yamdi{
+    //location = "/Users/J/.grails/2.3.5/projects/MyCloudMedia/tomcat/work/Tomcat/localhost/MyCloudMedia/grails-resources/images/" // or shared filesystem drive for a cluster yamdi{
     yamdi {
         path = "/bin/yamdi" // FLV metadata injector (IF TYPE= FLV)
     }
@@ -168,8 +177,8 @@ environments {
     }
     development {
         grails.paypal.server = "https://www.sandbox.paypal.com/cgi-bin/webscr"
-        grails.paypal.email = "testpp_1211202427_biz@g2one.com"
-        grails.serverURL = "http://812.99.101.131"
+        grails.paypal.email = "jaime.freire@gmail.com"
+        grails.serverURL = "http://localhost:8080/MyCloudMedia"
     }
 }
 

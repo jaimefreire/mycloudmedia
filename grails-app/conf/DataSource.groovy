@@ -8,7 +8,7 @@ dataSource {
     pooled = true
     dialect = org.hibernate.dialect.mydialect.PostgreSQL8Dialect
     validationQuery = "select 1 from dual"
-    logSql = true
+    logSql = false
 
 
 }
